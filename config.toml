@@ -1,0 +1,4 @@
+baseURL = "https://bd.scoiatael.dev/"
+languageCode = "en-us"
+title = "Scoiatael's braindump"
+theme = "ananke"
