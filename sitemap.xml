@@ -3,17 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://bd.scoiatael.dev/categories/</loc>
+    <lastmod>2020-01-06T17:38:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bd.scoiatael.dev/tags/go/</loc>
+    <lastmod>2020-01-06T17:38:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bd.scoiatael.dev/</loc>
+    <lastmod>2020-01-06T17:38:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bd.scoiatael.dev/projects/parrhasius/</loc>
+    <lastmod>2020-01-06T17:38:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bd.scoiatael.dev/projects/</loc>
+    <lastmod>2020-01-06T17:38:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bd.scoiatael.dev/categories/projects/</loc>
+    <lastmod>2020-01-06T17:38:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bd.scoiatael.dev/tags/ruby/</loc>
+    <lastmod>2020-01-06T17:38:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bd.scoiatael.dev/tags/</loc>
+    <lastmod>2020-01-06T17:38:00+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bd.scoiatael.dev/projects/blog-start/</loc>
     <lastmod>2020-01-05T19:47:00+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://bd.scoiatael.dev/tags/blog/</loc>
-    <lastmod>2020-01-05T19:47:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bd.scoiatael.dev/categories/</loc>
     <lastmod>2020-01-05T19:47:00+01:00</lastmod>
   </url>
   
@@ -28,27 +63,7 @@
   </url>
   
   <url>
-    <loc>https://bd.scoiatael.dev/</loc>
-    <lastmod>2020-01-05T19:47:00+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://bd.scoiatael.dev/tags/org/</loc>
-    <lastmod>2020-01-05T19:47:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bd.scoiatael.dev/projects/</loc>
-    <lastmod>2020-01-05T19:47:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bd.scoiatael.dev/categories/projects/</loc>
-    <lastmod>2020-01-05T19:47:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bd.scoiatael.dev/tags/</loc>
     <lastmod>2020-01-05T19:47:00+01:00</lastmod>
   </url>
   
