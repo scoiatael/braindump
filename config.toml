@@ -2,3 +2,10 @@ baseURL = "https://bd.scoiatael.dev/"
 languageCode = "en-us"
 title = "Scoiatael's braindump"
 theme = "ananke"
+
+[params]
+  favicon = "favicon/favicon.ico"
+  github = "https://github.com/scoiatael/braindump"
+  background_color_class = "bg-light-blue"
+  featured_image = "/images/rohro-clark-Jgdbp3pPj9Q-unsplash.jpg"
+  description = "Abandon all hope, ye who enter here."

@@ -1,0 +1,11 @@
+#+HUGO_BASE_DIR: ../
+#+HUGO_SECTION: ./
+
+* My treasure cove.
+  :PROPERTIES:
+  :EXPORT_FILE_NAME: _index
+  :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description "Lasciate ogne speranza, voi ch'intrate."
+  :END:
+   Welcome to my braindump. All my hopes, all my dreams and ideas lie in front of you. Tread carefully.\\
+
+   Some ideas might be worth something, most likely not.

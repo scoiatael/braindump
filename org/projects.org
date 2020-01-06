@@ -1,0 +1,38 @@
+#+HUGO_BASE_DIR: ../
+#+HUGO_SECTION: ./
+
+* Projects :@projects:
+   :PROPERTIES:
+   :EXPORT_HUGO_SECTION: projects
+   :END:
+** DONE Blog                                            :blog:emacs:hugo:org:
+   CLOSED: [2020-01-05 Sun 19:47]
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: blog-start
+   :END:
+*** What?
+    Decided to start a blog.
+    Nothing fancy, more like a braindump.
+    All the ideas for projects which are currently in various TODO programs (Google Keep, Todoiost, Wunderlist) and org files, some descriptions for already writen projects with links.
+    Maybe some ramblings around random thoughts.
+*** Why?
+    Of all the weird places I could get motivation from, the thought occured when reading RFC. A pretty special one, for that: [[https://tools.ietf.org/html/rfc8700][RFC 8700 - Fifty Years of RFCs]]. At one point author remarked a need for less formalized form of discussion; and by that defined RFC as
+    #+BEGIN_QUOTE
+    The content of a NWG note may be any thought, suggestion, etc.
+    related to the HOST software or other aspect of the network.
+    Notes are encouraged to be timely rather than polished.
+    Philosophical positions without examples or other specifics,
+    specific suggestions or implementation techniques without
+    introductory or background explication, and explicit questions
+    without any attempted answers are all acceptable.  The minimum
+    length for a NWG note is one sentence.
+    #+END_QUOTE
+    Somehow, the idea resonates with me a lot. And so, let's try and see what happens.
+*** How?
+    I like Emacs. So after some research I decided to try [[https://ox-hugo.scripter.co/][ox-hugo]] for the simplest possible solution.
+** TODO Parrhasius :ruby:go:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: projects/parrhasius
+   :END:
+   One day I found myself scrolling through [[https://4chan.org/wg][internet best source of wallpapers]] and found myself wishing for something to mass-download a whole thread.
+   Without a proper google search even, decided to write something on my own. Presto! A new project.

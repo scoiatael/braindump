@@ -1,0 +1,16 @@
+#+HUGO_BASE_DIR: ../
+#+HUGO_SECTION: ./
+
+* Credits
+  :PROPERTIES:
+  :EXPORT_FILE_NAME: credits
+  :EXPORT_HUGO_MENU: :menu "main"
+  :END:
+** Splash screen
+   Photo by [[https://unsplash.com/@rohro?utm%5Fmedium=referral&amp;utm%5Fcampaign=photographer-credit&amp;utm%5Fcontent=creditBadge][rohro clark on Unsplash]].
+** Hugo theme
+   Credit to [[https://github.com/budparr/gohugo-theme-ananke][Bud Parr]].
+** Org->hugo export
+   Credit to [[https://ox-hugo.scripter.co/][Kaushal Modi]].
+** Favicon
+   Generated using [[https://favicon.io/favicon-generator/][favicon.io]].
