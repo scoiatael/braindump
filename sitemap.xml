@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://bd.scoiatael.dev/projects/blog-start/</loc>
+    <lastmod>2020-01-05T19:47:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bd.scoiatael.dev/tags/blog/</loc>
+    <lastmod>2020-01-05T19:47:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bd.scoiatael.dev/categories/</loc>
+    <lastmod>2020-01-05T19:47:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bd.scoiatael.dev/tags/emacs/</loc>
+    <lastmod>2020-01-05T19:47:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bd.scoiatael.dev/tags/hugo/</loc>
+    <lastmod>2020-01-05T19:47:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bd.scoiatael.dev/</loc>
+    <lastmod>2020-01-05T19:47:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bd.scoiatael.dev/tags/org/</loc>
+    <lastmod>2020-01-05T19:47:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bd.scoiatael.dev/projects/</loc>
+    <lastmod>2020-01-05T19:47:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bd.scoiatael.dev/categories/projects/</loc>
+    <lastmod>2020-01-05T19:47:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bd.scoiatael.dev/tags/</loc>
+    <lastmod>2020-01-05T19:47:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bd.scoiatael.dev/credits/</loc>
+  </url>
+  
+</urlset>
