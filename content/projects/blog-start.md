@@ -4,6 +4,10 @@ date = 2020-01-05T19:47:00+01:00
 tags = ["blog", "emacs", "hugo", "org"]
 categories = ["projects"]
 draft = false
+[menu.main]
+  weight = 2001
+  identifier = "blog"
+  parent = "Projects"
 +++
 
 ## What? {#what}
