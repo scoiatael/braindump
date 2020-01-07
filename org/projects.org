@@ -34,7 +34,7 @@
    CLOSED: [2020-01-06 Mon 17:38]
    :PROPERTIES:
    :EXPORT_FILE_NAME: parrhasius
-   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featured_image "https://camo.githubusercontent.com/8f3c61ee4eb28f12c7e0ad935906ce41831ef785/68747470733a2f2f646c2e64726f70626f782e636f6d2f732f676f76637a6564756b78676b6f6e782f323031392d31322d30352d3134313633315f3139323078313038305f7363726f742e706e67"
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featured_image "/images/parrhasius.png"
    :END:
    One day I found myself scrolling through [[https://4chan.org/wg][internet best source of wallpapers]] and found myself wishing for something to mass-download a whole thread.
    Without a proper google search even, decided to write something on my own. Presto! A new project.

@@ -4,7 +4,7 @@ date = 2020-01-06T17:38:00+01:00
 tags = ["ruby", "go"]
 categories = ["projects"]
 draft = false
-featured_image = "https://camo.githubusercontent.com/8f3c61ee4eb28f12c7e0ad935906ce41831ef785/68747470733a2f2f646c2e64726f70626f782e636f6d2f732f676f76637a6564756b78676b6f6e782f323031392d31322d30352d3134313633315f3139323078313038305f7363726f742e706e67"
+featured_image = "/images/parrhasius.png"
 +++
 
 One day I found myself scrolling through [internet best source of wallpapers](https://4chan.org/wg) and found myself wishing for something to mass-download a whole thread.
