@@ -41,7 +41,7 @@ Part 1: Good beginnings The basic part is easy enough: use Nokogiri in Ruby to p
 html = Nokogiri(open(link).read) html.search(&#39;a&#39;) .select { |l| l.children.size == 1 &amp;&amp; l.">
 <meta itemprop="datePublished" content="2020-01-06T17:38:00&#43;01:00" />
 <meta itemprop="dateModified" content="2020-01-06T17:38:00&#43;01:00" />
-<meta itemprop="wordCount" content="454">
+<meta itemprop="wordCount" content="457">
 
 
 
@@ -61,7 +61,7 @@ html = Nokogiri(open(link).read) html.search(&#39;a&#39;) .select { |l| l.childr
 
   
   
-  <header class="cover bg-top" style="background-image: url('https://camo.githubusercontent.com/8f3c61ee4eb28f12c7e0ad935906ce41831ef785/68747470733a2f2f646c2e64726f70626f782e636f6d2f732f676f76637a6564756b78676b6f6e782f323031392d31322d30352d3134313633315f3139323078313038305f7363726f742e706e67');">
+  <header class="cover bg-top" style="background-image: url('https://bd.scoiatael.dev/images/parrhasius.png');">
     <div class="pb3-m pb6-l bg-black-60">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l justify-between items-center center">
@@ -205,6 +205,7 @@ Former is easy with <a href="https://github.com/minimagick/minimagick">minimagic
 image<span style="color:#f92672">.</span>resize <span style="color:#e6db74">&#39;256x256&#39;</span>
 image<span style="color:#f92672">.</span>write(<span style="color:#f92672">[</span>dest, f<span style="color:#f92672">.</span>basename<span style="color:#f92672">]</span><span style="color:#f92672">.</span>join(<span style="color:#e6db74">&#39;/&#39;</span>))
 </code></pre></div><p>and the latter can be quite simple with <a href="http://neptunian.github.io/react-photo-gallery/">React Photo Gallery</a>, <a href="https://github.com/CassetteRocks/react-infinite-scroller#readme">React Infinite Scroller</a> and <a href="https://react-simple-img.now.sh/">React Simple Img</a>. This part still requires some cleanup (and maybe Redux), so I'll delay posting code until then.</p>
+<p>Source code: <a href="https://github.com/scoiatael/parrhasius">https://github.com/scoiatael/parrhasius</a><!-- raw HTML omitted --></p>
 <ul class="pa0">
   
    <li class="list">
