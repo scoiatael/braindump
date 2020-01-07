@@ -4,7 +4,6 @@
 * Projects :@projects:
    :PROPERTIES:
    :EXPORT_HUGO_SECTION: projects
-   :EXPORT_HUGO_MENU: :menu "main" :parent "Projects"
    :END:
 ** DONE Blog                                            :blog:emacs:hugo:org:
    CLOSED: [2020-01-05 Sun 19:47]

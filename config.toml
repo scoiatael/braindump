@@ -9,3 +9,11 @@ theme = "ananke"
   background_color_class = "bg-light-blue"
   featured_image = "/images/rohro-clark-Jgdbp3pPj9Q-unsplash.jpg"
   description = "Abandon all hope, ye who enter here."
+
+[menu]
+
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects/"
+    weight = -110
