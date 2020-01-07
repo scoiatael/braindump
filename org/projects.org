@@ -107,3 +107,36 @@
       image.write([dest, f.basename].join('/'))
     #+END_SRC
     and the latter can be quite simple with [[http://neptunian.github.io/react-photo-gallery/][React Photo Gallery]], [[https://github.com/CassetteRocks/react-infinite-scroller#readme][React Infinite Scroller]] and [[https://react-simple-img.now.sh/][React Simple Img]]. This part still requires some cleanup (and maybe Redux), so I'll delay posting code until then.
+
+   Source code: https://github.com/scoiatael/parrhasius\\
+** TODO statsd                                                :go:monitoring:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: statsd
+   :END:
+   Source code: https://github.com/scoiatael/statsd and https://github.com/scoiatael/tracing\\
+** TODO dotfiles                                              :config:fish:emacs:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: dotfiles
+   :END:
+   Source code: https://github.com/scoiatael/dotfiles\\
+** TODO Jarvis                                                      :clojure:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: jarvis
+   :END:
+   Source code: https://github.com/scoiatael/jarvis and https://github.com/scoiatael/masters_thesis\\
+** TODO archai                                  :go:cassandra:event_sourcing:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: archai
+   :END:
+   Source code: https://github.com/scoiatael/archai\\
+** TODO colorls-rs :rust:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: colorls_rs
+   :END:
+   Source code: https://github.com/scoiatael/colorls-rs\\
+** TODO resume                                                         :clojure:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: resume
+   :END:
+   Source code: https://github.com/scoiatael/resume\\
+   Site: https://resume.czaplin.ski\\

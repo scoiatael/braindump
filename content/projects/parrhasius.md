@@ -98,3 +98,5 @@ image.write([dest, f.basename].join('/'))
 ```
 
 and the latter can be quite simple with [React Photo Gallery](http://neptunian.github.io/react-photo-gallery/), [React Infinite Scroller](https://github.com/CassetteRocks/react-infinite-scroller#readme) and [React Simple Img](https://react-simple-img.now.sh/). This part still requires some cleanup (and maybe Redux), so I'll delay posting code until then.
+
+Source code: <https://github.com/scoiatael/parrhasius><br />
