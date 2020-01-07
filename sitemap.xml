@@ -3,17 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://bd.scoiatael.dev/categories/</loc>
-    <lastmod>2020-01-06T17:38:00+01:00</lastmod>
+    <loc>https://bd.scoiatael.dev/tags/architecture/</loc>
+    <lastmod>2020-01-07T14:46:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://bd.scoiatael.dev/tags/go/</loc>
-    <lastmod>2020-01-06T17:38:00+01:00</lastmod>
+    <loc>https://bd.scoiatael.dev/categories/</loc>
+    <lastmod>2020-01-07T14:46:00+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://bd.scoiatael.dev/</loc>
+    <lastmod>2020-01-07T14:46:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bd.scoiatael.dev/rants/</loc>
+    <lastmod>2020-01-07T14:46:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bd.scoiatael.dev/categories/rants/</loc>
+    <lastmod>2020-01-07T14:46:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bd.scoiatael.dev/rants/software-architecture/</loc>
+    <lastmod>2020-01-07T14:46:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bd.scoiatael.dev/tags/</loc>
+    <lastmod>2020-01-07T14:46:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bd.scoiatael.dev/tags/go/</loc>
     <lastmod>2020-01-06T17:38:00+01:00</lastmod>
   </url>
   
@@ -34,11 +59,6 @@
   
   <url>
     <loc>https://bd.scoiatael.dev/tags/ruby/</loc>
-    <lastmod>2020-01-06T17:38:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bd.scoiatael.dev/tags/</loc>
     <lastmod>2020-01-06T17:38:00+01:00</lastmod>
   </url>
   
