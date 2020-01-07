@@ -11,9 +11,14 @@ theme = "ananke"
   description = "Abandon all hope, ye who enter here."
 
 [menu]
-
   [[menu.main]]
     identifier = "projects"
     name = "Projects"
     url = "/projects/"
     weight = -110
+
+  [[menu.main]]
+    identifier = "rants"
+    name = "Rants"
+    url = "/rants/"
+    weight = -100
