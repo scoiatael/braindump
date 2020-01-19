@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>go on Scoiatael&#39;s braindump</title>
+    <link>https://bd.scoiatael.dev/tags/go/</link>
+    <description>Recent content in go on Scoiatael&#39;s braindump</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 06 Jan 2020 17:38:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://bd.scoiatael.dev/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Parrhasius</title>
+      <link>https://bd.scoiatael.dev/projects/parrhasius/</link>
+      <pubDate>Mon, 06 Jan 2020 17:38:00 +0100</pubDate>
+      
+      <guid>https://bd.scoiatael.dev/projects/parrhasius/</guid>
+      <description>One day I found myself scrolling through internet best source of wallpapers and found myself wishing for something to mass-download a whole thread. Without a proper google search even, decided to write something on my own. Presto! A new project.
+Part 1: Good beginnings The basic part is easy enough: use Nokogiri in Ruby to parse site HTML, extract image URLs:
+html = Nokogiri(open(link).read) html.search(&amp;#39;a&amp;#39;) .select { |l| l.children.size == 1 &amp;amp;&amp;amp; l.</description>
+    </item>
+    
+  </channel>
+</rss>

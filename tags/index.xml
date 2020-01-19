@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Scoiatael&#39;s braindump</title>
+    <link>https://bd.scoiatael.dev/tags/</link>
+    <description>Recent content in Tags on Scoiatael&#39;s braindump</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 19 Jan 2020 21:39:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://bd.scoiatael.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>python</title>
+      <link>https://bd.scoiatael.dev/tags/python/</link>
+      <pubDate>Sun, 19 Jan 2020 21:39:00 +0100</pubDate>
+      
+      <guid>https://bd.scoiatael.dev/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>architecture</title>
+      <link>https://bd.scoiatael.dev/tags/architecture/</link>
+      <pubDate>Tue, 07 Jan 2020 14:46:00 +0100</pubDate>
+      
+      <guid>https://bd.scoiatael.dev/tags/architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go</title>
+      <link>https://bd.scoiatael.dev/tags/go/</link>
+      <pubDate>Mon, 06 Jan 2020 17:38:00 +0100</pubDate>
+      
+      <guid>https://bd.scoiatael.dev/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ruby</title>
+      <link>https://bd.scoiatael.dev/tags/ruby/</link>
+      <pubDate>Mon, 06 Jan 2020 17:38:00 +0100</pubDate>
+      
+      <guid>https://bd.scoiatael.dev/tags/ruby/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blog</title>
+      <link>https://bd.scoiatael.dev/tags/blog/</link>
+      <pubDate>Sun, 05 Jan 2020 19:47:00 +0100</pubDate>
+      
+      <guid>https://bd.scoiatael.dev/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>emacs</title>
+      <link>https://bd.scoiatael.dev/tags/emacs/</link>
+      <pubDate>Sun, 05 Jan 2020 19:47:00 +0100</pubDate>
+      
+      <guid>https://bd.scoiatael.dev/tags/emacs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://bd.scoiatael.dev/tags/hugo/</link>
+      <pubDate>Sun, 05 Jan 2020 19:47:00 +0100</pubDate>
+      
+      <guid>https://bd.scoiatael.dev/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>org</title>
+      <link>https://bd.scoiatael.dev/tags/org/</link>
+      <pubDate>Sun, 05 Jan 2020 19:47:00 +0100</pubDate>
+      
+      <guid>https://bd.scoiatael.dev/tags/org/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blog on Scoiatael&#39;s braindump</title>
+    <link>https://bd.scoiatael.dev/tags/blog/</link>
+    <description>Recent content in blog on Scoiatael&#39;s braindump</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 05 Jan 2020 19:47:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://bd.scoiatael.dev/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Blog</title>
+      <link>https://bd.scoiatael.dev/projects/blog-start/</link>
+      <pubDate>Sun, 05 Jan 2020 19:47:00 +0100</pubDate>
+      
+      <guid>https://bd.scoiatael.dev/projects/blog-start/</guid>
+      <description>What? Decided to start a blog. Nothing fancy, more like a braindump. All the ideas for projects which are currently in various TODO programs (Google Keep, Todoiost, Wunderlist) and org files, some descriptions for already writen projects with links. Maybe some ramblings around random thoughts.
+Why? Of all the weird places I could get motivation from, the thought occured when reading RFC. A pretty special one, for that: RFC 8700 - Fifty Years of RFCs.</description>
+    </item>
+    
+  </channel>
+</rss>
