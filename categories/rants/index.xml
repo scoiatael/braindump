@@ -6,10 +6,21 @@
     <description>Recent content in rants on Scoiatael&#39;s braindump</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 Jan 2020 14:46:00 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jan 2020 21:39:00 +0100</lastBuildDate>
     
 	<atom:link href="https://bd.scoiatael.dev/categories/rants/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>State of Python tooling</title>
+      <link>https://bd.scoiatael.dev/rants/state-of-python-tooling/</link>
+      <pubDate>Sun, 19 Jan 2020 21:39:00 +0100</pubDate>
+      
+      <guid>https://bd.scoiatael.dev/rants/state-of-python-tooling/</guid>
+      <description>Recently I joined a team working mostly in Python. As usual, one of the first steps is getting development environment for the projects up and running. The first part was quick and easy: download a couple of config files &amp;amp; secrets, docker-compose up and we are up and running.
+Then came the hard part: getting local Python environment running for tests and code-completion.
+Preface I&#39;m a big fan of direnv - having single .</description>
+    </item>
     
     <item>
       <title>Software architecture</title>

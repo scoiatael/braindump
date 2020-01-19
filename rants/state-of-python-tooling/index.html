@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Scoiatael&#39;s braindump  | State of Python tooling</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.62.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+<link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
+
+    
+
+    
+    
+    <meta property="og:title" content="State of Python tooling" />
+<meta property="og:description" content="Recently I joined a team working mostly in Python. As usual, one of the first steps is getting development environment for the projects up and running. The first part was quick and easy: download a couple of config files &amp; secrets, docker-compose up and we are up and running.
+Then came the hard part: getting local Python environment running for tests and code-completion.
+Preface I&#39;m a big fan of direnv - having single ." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bd.scoiatael.dev/rants/state-of-python-tooling/" />
+<meta property="article:published_time" content="2020-01-19T21:39:00+01:00" />
+<meta property="article:modified_time" content="2020-01-19T21:39:00+01:00" />
+<meta itemprop="name" content="State of Python tooling">
+<meta itemprop="description" content="Recently I joined a team working mostly in Python. As usual, one of the first steps is getting development environment for the projects up and running. The first part was quick and easy: download a couple of config files &amp; secrets, docker-compose up and we are up and running.
+Then came the hard part: getting local Python environment running for tests and code-completion.
+Preface I&#39;m a big fan of direnv - having single .">
+<meta itemprop="datePublished" content="2020-01-19T21:39:00&#43;01:00" />
+<meta itemprop="dateModified" content="2020-01-19T21:39:00&#43;01:00" />
+<meta itemprop="wordCount" content="915">
+
+
+
+<meta itemprop="keywords" content="python," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="State of Python tooling"/>
+<meta name="twitter:description" content="Recently I joined a team working mostly in Python. As usual, one of the first steps is getting development environment for the projects up and running. The first part was quick and easy: download a couple of config files &amp; secrets, docker-compose up and we are up and running.
+Then came the hard part: getting local Python environment running for tests and code-completion.
+Preface I&#39;m a big fan of direnv - having single ."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-light-blue">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://bd.scoiatael.dev/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Scoiatael&#39;s braindump
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/projects/" title="Projects page">
+              Projects
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/rants/" title="Rants page">
+              Rants
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/credits/" title="Credits page">
+              Credits
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+
+<a href="https://github.com/scoiatael/braindump" target="_blank" class="link-transition github link dib z-999 pt3 pt0-l mr1" title="Github link" rel="noopener" aria-label="follow on Github——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw9 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        RANTS
+      </p>
+      <h1 class="f1 athelas mb1">State of Python tooling</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-01-19T21:39:00&#43;01:00">January 19, 2020</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>Recently I joined a team working mostly in Python. As usual, one of the first steps is getting development environment for the projects up and running.
+The first part was quick and easy: download a couple of config files &amp; secrets, <code>docker-compose up</code> and we are up and running.</p>
+<p>Then came the hard part: getting local Python environment running for tests and code-completion.</p>
+<h2 id="preface">Preface</h2>
+<p>I'm a big fan of <a href="https://github.com/direnv/direnv">direnv</a> - having single <code>.envrc</code> file with all the environment variables and tool setup, shared by both terminal and editor is awesome.
+You can even create <code>envrc.template</code> and simple instructions for fellow developers on how to obtain missing values. This allows quite painless onboarding and migration between tool versions.
+Direnv also allows defining layouts for various programming languages - allowing easy setup of things like specific <a href="https://github.com/direnv/direnv/wiki/Node">Node</a> or <a href="https://github.com/direnv/direnv/wiki/Ruby">Ruby</a> versions.</p>
+<p>This works quite well with ability to define different lists of dependencies for production &amp; development/testing - via <a href="https://bundler.io/v1.12/groups.html">Bundler groups</a> or <a href="https://docs.npmjs.com/specifying-dependencies-and-devdependencies-in-a-package-json-file">npm's devDependencies</a>.
+As a new developer fill out <code>.envrc</code>, run <code>bundle install</code> and you are good to go.</p>
+<h2 id="so-what-s-wrong-with-python">So what's wrong with Python?</h2>
+<p>Well, I remember learning about <code>virtualenv</code> at one point in 2014 and being in awe with what it brought to table: real isolation of dependencies between projects, (almost) fully automated.
+All you had to do is <code>source venv/bin/activate &amp;&amp; pip install -r requirements.txt</code> and start coding.</p>
+<p>Fast forward to 2020 and somehow the same flow doesn't feel so good anymore. Why?</p>
+<ul>
+<li>What is your Python version? What should it be? Which one is used on production? Which one will users of your library use?</li>
+<li>Are you using private repository for Python packages? How are you authenticating?</li>
+<li>What dependencies are needed for production setup? Which ones only for testing? And moreover, how do you update them?</li>
+</ul>
+<h2 id="possible-solutions">Possible solutions</h2>
+<p>Over the years, couple of solutions started to grow. When setting up the project I tried the following:</p>
+<h3 id="venv-virtualenv"><a href="https://docs.python.org/3/library/venv.html">venv/virtualenv</a></h3>
+<p>Virtualenv approach became popular enough for it to become part of stdlib in 3.3. Finally times of <code>pip install --user virtualenv &amp;&amp; virtualenv venv &amp;&amp; source venv/bin/activate &amp;&amp; pip install -r requirements.txt</code> are over.</p>
+<p>But it didn't evolve: it isolates dependencies for given project, but doesn't try to solve any other issues. While this is a good philosophy for a library, this means we need some extra layer to take care of Python versions, dependencies, etc.</p>
+<h3 id="pyenv"><a href="https://github.com/pyenv/pyenv">pyenv</a></h3>
+<p>Pyenv aims to organize maintenance of several Python versions on one machine. It's based on <a href="https://github.com/rbenv/rbenv">a Ruby counterpart</a> and therefore quite battle-tested.</p>
+<p>Similar to <code>venv</code>, it solves just one thing and does it well. The downside is, you again have to coordinate tools on your own.
+There are a couple of ways to achieve <a href="https://github.com/direnv/direnv/wiki/Python#pyenv">the direnv integration</a>, each with its own set of problems.
+For tools like <a href="https://tox.readthedocs.io/en/latest/">tox</a> to work, <code>pyenv</code> supports having multiple python versions enabled at the same time.
+Now how should <code>virtualenv</code> behave? Do you want a separate env for each Python? Or just one, and let <code>tox</code> manage the rest?</p>
+<p>There's also one more thing to consider: how do you manage development tools for each version? Do you want <code>black</code> or <code>flake8</code> installed for each version?</p>
+<p>In the end I gave up on setting up <code>tox</code> in the project. I'll be running tests under just one Python and let CI test on different ones.</p>
+<h3 id="pipenv"><a href="https://github.com/pypa/pipenv">pipenv</a></h3>
+<p>To answer some of the issues, a new project was created. One that was supposed to implement for Python what <code>bundler</code> does for Ruby.</p>
+<p>Sadly, it looks weird: last release happened <a href="https://github.com/pypa/pipenv/releases/tag/v2018.11.26">over a year ago</a>, Google search for docs point over to <a href="https://pipenv-fork.readthedocs.io/en/latest/">a fork(?)</a> instead of <a href="https://pipenv.kennethreitz.org/en/latest/">the official ones</a>, there are <a href="https://github.com/pypa/pipenv/issues/4058">weird rumors</a> in the community.
+Now, this wouldn't be <!-- raw HTML omitted -->that<!-- raw HTML omitted --> bad, if the project was mature and feature-complete - meaning I could trust it and start porting over project to it.</p>
+<p>Sadly, that wasn't the case for me - most likely due to me not understanding <code>pip</code> enough - but that means there will be more issues down the road.
+The specific problem I failed to overcome was using private repository for some packages when installing current package.
+It'd either try to pull all packages from it (as if pip <code>--index-url</code> flag was set), or fail to use it at all.
+That'd mean having to migrate all packages we were using to Pip at once, instead of doing it incrementally. A deal breaker for me.</p>
+<h3 id="poetry"><a href="https://python-poetry.org/">poetry</a></h3>
+<p>Quite ironically, I noticed this project being advertised on one of <code>pipenv</code> Github issues.
+It's promise is to be</p>
+<blockquote>
+<p>a single tool to manage my Python projects from start to finish.</p>
+</blockquote>
+<p>It also pokes at <code>pip</code>'s issues with dependency resolution.</p>
+<p>The only problem is that it uses its own Toml configuration file - meaning, again, having to port over all of our packages to this one tool.
+Maybe at some point this effort will be worth it; certainly not as a part of setting it up for a single developer.</p>
+<h3 id="asdf"><a href="https://asdf-vm.com/#/">asdf</a></h3>
+<p>In the end, I was committed to using <code>pyenv</code> + <code>pyenv-virtualenv</code> plugin with one of the more magical setups from <code>direnv</code>.
+I remembered one more tool that came handy when working with Elixir: <code>asdf</code>.
+It's a generalized version manager, supporting multiple languages.
+It has both <a href="https://github.com/asdf-community/asdf-direnv">a direnv plugin</a> and <a href="https://github.com/danhper/asdf-python">python one</a>, meaning most of the heavy lifting is already done.</p>
+<p>In the end, my <code>.envrc</code> looks as following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">use asdf python 3.8.1
+layout python
+</code></pre></div><p>and achieves <em>almost</em> what it was supposed to do; only victim was <code>tox</code> and testing for multiple Python versions.</p>
+<ul class="pa0">
+  
+   <li class="list">
+     <a href="/tags/python" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">python</a>
+   </li>
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-light-blue bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://bd.scoiatael.dev/" >
+    &copy;  Scoiatael's braindump 2020 
+  </a>
+    <div>
+
+
+
+
+
+
+
+<a href="https://github.com/scoiatael/braindump" target="_blank" class="link-transition github link dib z-999 pt3 pt0-l mr1" title="Github link" rel="noopener" aria-label="follow on Github——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+<script>
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+  analytics.load("2ajArWYUWxsiIv8eDNRZiQvNVxAEHkkN");
+  analytics.page();
+  }}();
+</script>
+
+  </body>
+</html>
