@@ -36,7 +36,7 @@
 <meta property="og:description" content="Lasciate ogne speranza, voi ch&#39;intrate." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bd.scoiatael.dev/" />
-<meta property="og:updated_time" content="2020-01-19T21:39:00+01:00" />
+<meta property="og:updated_time" content="2020-03-07T12:58:00+01:00" />
 <meta itemprop="name" content="My treasure cove.">
 <meta itemprop="description" content="Lasciate ogne speranza, voi ch&#39;intrate."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="My treasure cove."/>
@@ -145,7 +145,7 @@
       
        
           <h1 class="flex-none">
-            Recent Rants
+            Recent Projects
           </h1>
         
 
@@ -160,18 +160,59 @@
   <div class="db pv4 ph3 ph0-l no-underline dark-gray">
     <div class="flex flex-column flex-row-ns">
       
-      <div class="blah w-100">
+          
+        
+        <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
+          <a href="https://bd.scoiatael.dev/projects/matrix-logs/" class="db grow">
+            <img src="https://raw.githubusercontent.com/wiki/akinomyoga/cxxmatrix/images/cxxmatrix-version01sA.gif" class="img" alt="image from Idea: matrix log analyzer">
+          </a>
+        </div>
+      
+      <div class="blah w-100 w-60-ns pl3-ns">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="https://bd.scoiatael.dev/rants/state-of-python-tooling/" class="color-inherit dim link">
-            State of Python tooling
+          <a href="https://bd.scoiatael.dev/projects/matrix-logs/" class="color-inherit dim link">
+            Idea: matrix log analyzer
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          Recently I joined a team working mostly in Python. As usual, one of the first steps is getting development environment for the projects up and running. The first part was quick and easy: download a couple of config files &amp; secrets, docker-compose up and we are up and running.
-Then came the hard part: getting local Python environment running for tests and code-completion.
-Preface I'm a big fan of direnv - having single .
+          Recently I came up an interesting project: cxxmatrix. It creates matrix-like animations in your terminal. This prompted a train of thought: it's neat, but in the movie it had a purpose. It was used like a tail -f /var/log/messages: a real-time glimpse into what's currently happening inside the Matrix.
+Can we somehow make it a useful reality? My latest PITA has been exactly that: looking into trails of logs in order to find patterns.
         </div>
-          <a href="https://bd.scoiatael.dev/rants/state-of-python-tooling/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="https://bd.scoiatael.dev/projects/matrix-logs/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+          
+        
+        <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
+          <a href="https://bd.scoiatael.dev/projects/parrhasius/" class="db grow">
+            <img src="https://bd.scoiatael.dev/images/parrhasius.webp" class="img" alt="image from Parrhasius">
+          </a>
+        </div>
+      
+      <div class="blah w-100 w-60-ns pl3-ns">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="https://bd.scoiatael.dev/projects/parrhasius/" class="color-inherit dim link">
+            Parrhasius
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          One day I found myself scrolling through internet best source of wallpapers and found myself wishing for something to mass-download a whole thread. Without a proper google search even, decided to write something on my own. Presto! A new project.
+Part 1: Good beginnings The basic part is easy enough: use Nokogiri in Ruby to parse site HTML, extract image URLs:
+html = Nokogiri(open(link).read) html.search(&#39;a&#39;) .select { |l| l.children.size == 1 &amp;&amp; l.
+        </div>
+          <a href="https://bd.scoiatael.dev/projects/parrhasius/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -188,15 +229,15 @@ Preface I'm a big fan of direnv - having single .
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="https://bd.scoiatael.dev/rants/software-architecture/" class="color-inherit dim link">
-            Software architecture
+          <a href="https://bd.scoiatael.dev/projects/blog-start/" class="color-inherit dim link">
+            Blog
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          Recently I began to wonder why is building software that interesting? I quite enjoy computer and tabletop games, and somehow simply building software seems to be at least as challenging and in turn rewarding.
-The obvious answer: joy of creation Though I haven't done any research in that area, I'm quite sure that in general people like creating - and by that expressing themselves, and losing themselves in the process. It seems a bit far-fetched to compare painting to writing code.
+          What? Decided to start a blog. Nothing fancy, more like a braindump. All the ideas for projects which are currently in various TODO programs (Google Keep, Todoiost, Wunderlist) and org files, some descriptions for already writen projects with links. Maybe some ramblings around random thoughts.
+Why? Of all the weird places I could get motivation from, the thought occured when reading RFC. A pretty special one, for that: RFC 8700 - Fifty Years of RFCs.
         </div>
-          <a href="https://bd.scoiatael.dev/rants/software-architecture/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="https://bd.scoiatael.dev/projects/blog-start/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>

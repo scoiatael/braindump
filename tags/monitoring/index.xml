@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>monitoring on Scoiatael&#39;s braindump</title>
+    <link>https://bd.scoiatael.dev/tags/monitoring/</link>
+    <description>Recent content in monitoring on Scoiatael&#39;s braindump</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 07 Mar 2020 12:58:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://bd.scoiatael.dev/tags/monitoring/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Idea: matrix log analyzer</title>
+      <link>https://bd.scoiatael.dev/projects/matrix-logs/</link>
+      <pubDate>Sat, 07 Mar 2020 12:58:00 +0100</pubDate>
+      
+      <guid>https://bd.scoiatael.dev/projects/matrix-logs/</guid>
+      <description>Recently I came up an interesting project: cxxmatrix. It creates matrix-like animations in your terminal. This prompted a train of thought: it&#39;s neat, but in the movie it had a purpose. It was used like a tail -f /var/log/messages: a real-time glimpse into what&#39;s currently happening inside the Matrix.
+Can we somehow make it a useful reality? My latest PITA has been exactly that: looking into trails of logs in order to find patterns.</description>
+    </item>
+    
+  </channel>
+</rss>
