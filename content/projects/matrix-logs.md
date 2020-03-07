@@ -8,7 +8,7 @@ draft = false
 featured_image = "https://raw.githubusercontent.com/wiki/akinomyoga/cxxmatrix/images/cxxmatrix-version01sA.gif"
 +++
 
-Recently I came up an interesting project: [cxxmatrix](https://github.com/akinomyoga/cxxmatrix). It creates matrix-like animations
+Recently I came upon an interesting project: [cxxmatrix](https://github.com/akinomyoga/cxxmatrix). It creates matrix-like animations
 in your terminal. This prompted a train of thought: it's neat, but in the movie
 it had a purpose. It was used like a `tail -f /var/log/messages`: a real-time
 glimpse into what's currently happening inside the Matrix.
