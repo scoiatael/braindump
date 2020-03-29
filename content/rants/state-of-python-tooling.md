@@ -1,5 +1,6 @@
 +++
 title = "State of Python tooling"
+author = ["Lukasz Czaplinski"]
 date = 2020-01-19T21:39:00+01:00
 tags = ["python"]
 categories = ["rants"]
@@ -80,10 +81,34 @@ It's promise is to be
 
 > a single tool to manage my Python projects from start to finish.
 
-It also pokes at `pip`'s issues with dependency resolution.
+It also pokes at `pip`'s issues with dependency resolution. At the very
+beginning I was dissuaded from using this tool by TOML configuration
+language. I also misunderstood how it works and assumed it'll be building
+it's own way of packaging libraries disjoint from PyPi.
 
-The only problem is that it uses its own Toml configuration file - meaning, again, having to port over all of our packages to this one tool.
-Maybe at some point this effort will be worth it; certainly not as a part of setting it up for a single developer.
+That's not the case - it can package library the same way `setup.py` would
+and upload to any PyPi-compatible repository (like Nexus we are using
+internally).
+
+I actually ended up porting one of our internal libraries to Poetry to get
+a better feel for it. What I liked overall:
+
+-   support for locking dependencies, exporting to `requirements.txt`,
+-   control over transitive dependencies and easy update process,
+-   understands virtualenvs - can create when ran outside one,
+-   build and publish with one command - also to private repo,
+-   support for version changes via CLI (goodbye custom scripts for bumping
+    version!),
+
+What I didn't like:
+
+-   focused on libraries (builds wheels with flexible dependency versions,
+    which is a good default for libs, but a bad one for apps),
+-   uses `XDG_CONFIG_DIR` and `XDG_CACHE_DIR` on Linux without option for
+    directly setting cache and config dirs with environment variables - and
+    thus getting Docker builds exactly right requires some tinkering,
+-   no Python API (it shouldn't be imported) - so you need to run it via
+    subprocess when automating actions,
 
 
 ### [asdf](https://asdf-vm.com/#/) {#asdf}
@@ -101,3 +126,24 @@ layout python
 ```
 
 and achieves _almost_ what it was supposed to do; only victim was `tox` and testing for multiple Python versions.
+It's worth noting that Python plugin for asdf uses pyenv under the hood
+anyway, so you can think of it as best of both worlds.
+
+
+## Sane workflow? {#sane-workflow}
+
+In the end I'm using `asdf` + `poetry` for future projects. What that means for
+me?
+
+-   Python version is managed declaratively via `.envrc` and `.tools-version`,
+-   Virtualenv is created via `.envrc`, so all my tools will use the same environment
+    as soon as I `cd` into project folder,
+-   Dependencies are managed by Poetry, meaning sane update process.
+
+For code completion I'm using [Microsoft Python language server](https://github.com/microsoft/python-language-server), which works
+quite nicely with Emacs - all that was need was a [bit of a glue](https://github.com/scoiatael/dotfiles/blob/master/emacs/doom.d/autoload/python.el#L36) between `direnv`
+and `python-mode`.
+
+I need to further investigate installing [packages for each Python version](https://github.com/danhper/asdf-python#default-python-packages) with
+`asdf`. It that proves to be working nicely, almost all of my goals for good
+development environment would be satisfied.
