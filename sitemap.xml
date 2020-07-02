@@ -111,4 +111,12 @@
     <loc>https://bd.scoiatael.dev/credits/</loc>
   </url>
   
+  <url>
+    <loc>https://bd.scoiatael.dev/tags/puppet/</loc>
+  </url>
+  
+  <url>
+    <loc>https://bd.scoiatael.dev/rants/puppet-deferred/</loc>
+  </url>
+  
 </urlset>

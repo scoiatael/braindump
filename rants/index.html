@@ -9,7 +9,7 @@
     <meta name="generator" content="Hugo 0.62.1" />
     
     
-      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+      <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
     
 
     
@@ -42,9 +42,11 @@
 <meta name="twitter:title" content="Rants"/>
 <meta name="twitter:description" content="Abandon all hope, ye who enter here."/>
 
+      
+    
   </head>
 
-  <body class="ma0 avenir bg-near-white">
+  <body class="ma0 avenir bg-near-white production">
 
     
 
@@ -154,6 +156,25 @@ Preface I'm a big fan of direnv - having single .
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       Recently I began to wonder why is building software that interesting? I quite enjoy computer and tabletop games, and somehow simply building software seems to be at least as challenging and in turn rewarding.
 The obvious answer: joy of creation Though I haven't done any research in that area, I'm quite sure that in general people like creating - and by that expressing themselves, and losing themselves in the process. It seems a bit far-fetched to compare painting to writing code.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Rants</span>
+    <h1 class="f3 near-black">
+      <a href="https://bd.scoiatael.dev/rants/puppet-deferred/" class="link black dim">
+        Things Puppet won&#39;t tell you about Deferred
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      You might've heard about one of Puppet 6's freshfeatures: Deferred. It basically allows you to run code on agent during execution, instead of only on master during compilation.
+It's awesome for many reasons; you can:
+ retrieve secrets on agents, implement lazy execution and macros,  But it has one big problem. Let me show what's wrong.
+Usage Try writing an example code with Deferred:
+# manifest.pp$args = { now_on_master =&gt; new(TimeStamp), shadow_contents =&gt; Deferred(&#39;file&#39;, [&#39;/etc/puppet_time.
     </div>
   </div>
 </div>

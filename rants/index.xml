@@ -32,5 +32,18 @@ Preface I&#39;m a big fan of direnv - having single .</description>
 The obvious answer: joy of creation Though I haven&#39;t done any research in that area, I&#39;m quite sure that in general people like creating - and by that expressing themselves, and losing themselves in the process. It seems a bit far-fetched to compare painting to writing code.</description>
     </item>
     
+    <item>
+      <title>Things Puppet won&#39;t tell you about Deferred</title>
+      <link>https://bd.scoiatael.dev/rants/puppet-deferred/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bd.scoiatael.dev/rants/puppet-deferred/</guid>
+      <description>You might&#39;ve heard about one of Puppet 6&#39;s freshfeatures: Deferred. It basically allows you to run code on agent during execution, instead of only on master during compilation.
+It&#39;s awesome for many reasons; you can:
+ retrieve secrets on agents, implement lazy execution and macros,  But it has one big problem. Let me show what&#39;s wrong.
+Usage Try writing an example code with Deferred:
+# manifest.pp$args = { now_on_master =&amp;gt; new(TimeStamp), shadow_contents =&amp;gt; Deferred(&amp;#39;file&amp;#39;, [&amp;#39;/etc/puppet_time.</description>
+    </item>
+    
   </channel>
 </rss>

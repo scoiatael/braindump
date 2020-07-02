@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>puppet on Scoiatael&#39;s braindump</title>
+    <link>https://bd.scoiatael.dev/tags/puppet/</link>
+    <description>Recent content in puppet on Scoiatael&#39;s braindump</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://bd.scoiatael.dev/tags/puppet/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Things Puppet won&#39;t tell you about Deferred</title>
+      <link>https://bd.scoiatael.dev/rants/puppet-deferred/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bd.scoiatael.dev/rants/puppet-deferred/</guid>
+      <description>You might&#39;ve heard about one of Puppet 6&#39;s freshfeatures: Deferred. It basically allows you to run code on agent during execution, instead of only on master during compilation.
+It&#39;s awesome for many reasons; you can:
+ retrieve secrets on agents, implement lazy execution and macros,  But it has one big problem. Let me show what&#39;s wrong.
+Usage Try writing an example code with Deferred:
+# manifest.pp$args = { now_on_master =&amp;gt; new(TimeStamp), shadow_contents =&amp;gt; Deferred(&amp;#39;file&amp;#39;, [&amp;#39;/etc/puppet_time.</description>
+    </item>
+    
+  </channel>
+</rss>
