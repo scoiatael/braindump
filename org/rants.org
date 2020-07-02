@@ -164,3 +164,104 @@ and =python-mode=.
 I need to further investigate installing [[https://github.com/danhper/asdf-python#default-python-packages][packages for each Python version]] with
 =asdf=. It that proves to be working nicely, almost all of my goals for good
 development environment would be satisfied.
+** DONE Things Puppet won't tell you about Deferred :puppet:
+:PROPERTIES:
+:EXPORT_FILE_NAME: puppet-deferred
+:END:
+You might've heard about one of Puppet 6's _fresh_ features: [[https://puppet.com/docs/puppet/latest/deferring_functions.html#deferred-function-example][Deferred]]. It basically allows you to run code on agent during execution, instead of only on master during compilation.
+
+It's awesome for many reasons; you can:
++ [[https://puppet.com/docs/puppet/latest/integrating_secrets_and_retrieving_agent-side_data.html][retrieve secrets on agents]],
++ [[http://puppet-on-the-edge.blogspot.com/2018/10/the-topic-is-deferred.html][implement lazy execution and macros]],
+
+But it has one big problem. Let me show what's wrong.
+ 
+*** Usage
+Try writing an example code with Deferred:
+#+begin_src puppet
+# manifest.pp
+$args = {
+    now_on_master => new(TimeStamp),
+    shadow_contents => Deferred('file', ['/etc/puppet_time.txt']),
+}
+
+file { "/etc/puppet_time.txt":
+  content => inline_epp('compile time - <%= $now_on_master %>', $args)
+}
+
+file { "/etc/puppet_time_shadow.txt":
+  content => Deferred('inline_epp', ['compile time - <%= $now_on_master %>, shadow: <%= $shadow_contents %>', $args]),
+  require  => File['/etc/puppet_time.txt']
+}
+#+end_src
+and run it with ~puppet apply manifest.pp~.
+
+Solution like this wouldn't be possible without ~Deferred~: contents of 2nd file dynamically depend on things created by previous ~file~.
+
+Now, it can apply to any resources being created as side-effect of Puppet commands.
+*** Problem
+Now let's try integrating Deferred into some of our classes:
+#+BEGIN_SRC puppet
+class foo(
+  String $bar,
+  String $shadow,
+) {
+    file { "/etc/puppet_time.txt":
+        content => $bar
+    }
+
+    file { "/etc/puppet_time_shadow.txt":
+        content => $shadow,
+        require  => File['/etc/puppet_time.txt']
+    }
+}
+
+$args = {
+    now_on_master => new(TimeStamp),
+    shadow_contents => Deferred('file', ['/etc/puppet_time.txt']),
+}
+
+class { 'foo':
+    bar => inline_epp('compile time - <%= $now_on_master %>', $args),
+    shadow => Deferred('inline_epp', ['compile time - <%= $now_on_master %>, shadow: <%= $shadow_contents %>', $args]),
+}
+#+END_SRC
+...and it breaks:
+#+begin_quote
+Error: Evaluation Error: Error while evaluating a Resource Statement, Class[Foo]: parameter 'shadow' expects a String value, got Deferred (file: /srv/puppet/manifest2.pp, line: 20, column: 1) on node 5ff8d7eef4ad
+#+end_quote
+Oops, looks like Deferred is a new data type, that's only briefly mentioned in the documentation, and suddenly all build-in resources know how to deal with it.
+
+But not any of resources you build, nor anyone else. So you can't integrate it with any of your code, can you?
+
+*** Solution?
+Thankfully, there's a solution to that problem: ~call~ function. It'll evaluate ~Deferred~ before it's passed to your class:
+#+BEGIN_SRC puppet
+class foo(
+  String $bar,
+  String $shadow,
+) {
+    file { "/etc/puppet_time.txt":
+        content => $bar
+    }
+
+    file { "/etc/puppet_time_shadow.txt":
+        content => $shadow,
+        require  => File['/etc/puppet_time.txt']
+    }
+}
+
+$args = {
+    now_on_master => new(TimeStamp),
+    shadow_contents => Deferred('file', ['/etc/puppet_time.txt']),
+}
+
+class { 'foo':
+    bar => inline_epp('compile time - <%= $now_on_master %>', $args),
+    shadow => call(Deferred('inline_epp', ['compile time - <%= $now_on_master %>, shadow: <%= $shadow_contents %>', $args])),
+}
+#+END_SRC
+But we are back at square one: ~call~ will execute code *during compilation*. So any benefits granted to us by ~Deferred~ are lost and this code doesn't work:
+#+begin_quote
+Error: Evaluation Error: Error while evaluating a Function Call, Could not find any files from /etc/puppet_time.txt (file: /srv/puppet/manifest3.pp, line: 22, column: 15) on node 5ff8d7eef4ad
+#+end_quote
